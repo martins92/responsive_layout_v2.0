@@ -27,11 +27,15 @@ body {
 a {
 	text-decoration: none;
 	color: #4a4a4a;
-	transition: .5s;
+	transition: .4s;
 }
 
 a:hover {
 	color: #000;
+}
+
+.main-nav ul li a:hover {
+	background-color: #FEFFF2;
 }
 
 p {
@@ -81,9 +85,10 @@ h3 {
 	font-size: 1.5em;
 }
 
-.main-nav ul li {
+.main-nav ul li a {
+	display: list-item;
 	background-color: #fff;
-	margin-bottom: 0.3em;
+	margin-bottom: 0.4em;
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 0.9em;
@@ -234,6 +239,9 @@ h3 {
 
 @media (min-width: 768px) {                         /* <<<<---- Styling for tablets ---- */
 
+	.main-nav ul li a:hover {
+		background-color: transparent;
+	}
 
 	/* ---- Avatar image ---- */
 
@@ -259,9 +267,13 @@ h3 {
 	}
 
 	.main-nav ul li {
+		display: inline-block;
+	}
+
+	.main-nav ul li a {
+		display: inline-block;
 		background-color: #fafafa;
 		padding: 0 1.3em;
-		display: inline-block;
 	}
 
 	.header-wrap {
@@ -367,7 +379,7 @@ h3 {
 
 	.hide { 																				 /* <<<<---- Footer navigation buttons ---- */
 		display: block;
-		padding: ;
+
 	}
 
 	.hide li {
@@ -418,7 +430,7 @@ h3 {
 		margin: 5px 0;
 	}
 
-	.main-nav ul li {
+	.main-nav ul li a {
 		display: inline-block;
 		padding: 0 0 0 1.5em;
 		margin: auto 0;

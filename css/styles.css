@@ -10,6 +10,10 @@
 	display: none;
 }
 
+.hide-p {
+	display: none;
+}
+
 body {
   font-family: 'Roboto', 'Roboto Condensed', sans-serif;
 	line-height: 1.7;
@@ -18,6 +22,16 @@ body {
 	text-align: center;
 	width: 100%;
 	margin: auto;
+}
+
+a {
+	text-decoration: none;
+	color: #4a4a4a;
+	transition: .5s;
+}
+
+a:hover {
+	color: #000;
 }
 
 p {
@@ -66,6 +80,7 @@ h3 {
 	text-transform: capitalize;
 	font-size: 1.5em;
 }
+
 .main-nav ul li {
 	background-color: #fff;
 	margin-bottom: 0.3em;
@@ -105,7 +120,7 @@ h3 {
 
 .portfolio-wrap {
 	padding-bottom: 2.9em;
-	background-color: #e5e9ea;           /* <-----Alternative color variation for main section background - #818e99 (darker grey) or #fff   */
+	background-color: #ededed;           /* <-----Alternative color variation for main section background - #818e99 (darker grey) or #fff   */
 	color: #515c66;
 }
 
@@ -128,6 +143,7 @@ h3 {
 	text-align: left;
 	width: 100%;
 	color: #fff;
+	font-size: 110%;
 }
 
 .skills-list {
@@ -256,7 +272,7 @@ h3 {
 		margin: 0 13px;
 	}
 
-	.introduction p {
+	.introduction-p {
 		float: left;
 		text-align: left;
 		display: inline-block;
@@ -270,9 +286,9 @@ h3 {
 	.col {
 		margin: 0;
 		width: 49.3%;
-		height: 409px;
-		padding: 12px 12px;
+		padding: 0 3px 12px;
 		display: inline-block;
+		vertical-align: top;
 	}
 
 	.portfolio-name {
@@ -287,7 +303,7 @@ h3 {
 
 	.port {
 		margin: auto;
-		padding: 15px 0;
+		padding: 0;
 		width: 100%;
 	}
 
@@ -305,18 +321,18 @@ h3 {
 	.portfolio-text p {
 		display: inline-block;
 		margin: 0;
-		padding: 15px 21px 45px 21px;
+		padding: 15px 21px 45px 15px;
 		width: 100%;
 	}
 
 	.portfolio-wrap {
-		padding-bottom: 4em;
+		padding: 0;
 	}
 
 	/* ---- Skills ---- */
 
 	.skills-wrap {
-		margin:0 25px;
+		margin: 0 5%;
 	}
 
 	/* ---- Footer ---- */
@@ -367,13 +383,28 @@ h3 {
 
 @media (min-width: 1024px) {                        /* <<<<---- Styling for desktops ---- */
 
+	/* ---- Navigation ---- */
+
+	.avatar-image {
+		width: 40%;
+	}
+
 	.introduction {
 		margin: 0;
 	}
 
-	.introduction p {
-		padding-right: .5em;
+	.hide-p {
+		padding-right: 2em;
 		margin: 0;
+		display: inline-block;
+		float: left;
+		width: 60%;
+		text-align: left;
+
+	}
+
+	#hide-pp {
+		display: none;
 	}
 
 	.main-nav {
@@ -381,16 +412,23 @@ h3 {
 		display: inline-block;
 	}
 
-	.main-nav ul li {
+	.main-nav ul {
+		display: inline-block;
 		float: right;
-		padding:0 0 0 1.5em;
-		margin: 0;
+		margin: 5px 0;
+	}
+
+	.main-nav ul li {
+		display: inline-block;
+		padding: 0 0 0 1.5em;
+		margin: auto 0;
 	}
 
 	.main-nav h1 {
-		float: left;
+		display: inline-block;
 		padding: 0;
 		font-size: 1.3em;
+		float: left;
 	}
 
 	.main-nav {
@@ -398,12 +436,14 @@ h3 {
 	}
 
 	.header-wrap {
-		margin: 0 3em;
+		margin: 0 4em;
 	}
 
-
-
 /* ---- Portfolio ---- */
+
+	.port-image-wrap {
+		margin: 0 24px;
+	}
 
 	.portfolio-wrap {
 		margin: 0 1.5em;
@@ -411,10 +451,32 @@ h3 {
 
 	.col {
 		display: inline-block;
+		vertical-align: top;
 		width: 33%;
-		float: none;
 		margin: 0;
-		padding: 2em 2em;
+		padding: 0 4.5px;
+	}
+
+	.portfolio-text p {
+
+		padding-bottom: 55px;
+
+	}
+
+	/* ---- Skills ---- */
+
+	.skills {
+		margin: 0 1.5em;
+	}
+
+	/* ---- Contact ---- */
+
+	.contact {
+		padding: 0 15em;
+	}
+
+	.footer-container {
+		padding: 1.3em 0;
 	}
 
 }
@@ -433,7 +495,7 @@ h3 {
 ==================================== */
 
 @media (max-width: 260px) {
-	.intro-image {
+	.avatar-image {
 		margin: auto;
 		width: 100%;
 	}
